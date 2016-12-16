@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
+    private Button mPrevButton;
     private TextView mQuestionTextView;
 
     private int mCurrentIndex = 0;
@@ -55,7 +56,20 @@ public class MainActivity extends AppCompatActivity {
         mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
 
 
+        mPrevButton= (Button) findViewById(R.id.prev_button);
+        mPrevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mCurrentIndex == 0 ) {
+                    mCurrentIndex = mQuestionBank.length;
+                    updateQuestion();
 
+                }else {
+                    mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+                    updateQuestion();
+                }
+            }
+        });
         mNextButton= (Button) findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,12 +97,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-}
 /*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.quiz, menu);
@@ -102,5 +112,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }*/
+    }
+*/
 
+
+
+
+}
