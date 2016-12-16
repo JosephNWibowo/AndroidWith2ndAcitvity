@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">FirstAndroidAppQuiz</string>
     <string name="question_text">Are you awesome?</string>
+    <string name="question_batman">Is Batman great?</string>
+    <string name="question_superman">Is superman cool?</string>
+    <string name="question_spiderman">Spiderman amazing?</string>
+
+
+
     <string name="true_button">True</string>
     <string name="false_button">False</string>
+    <string name="next_button">Next></string>
     <string name="action_settings">Settings</string>
     <string name="correct_toast">CORRECTOMUNDO!</string>
     <string name="incorrect_toast">Cmon, you are better than that!</string>
